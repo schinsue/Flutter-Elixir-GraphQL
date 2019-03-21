@@ -18,8 +18,6 @@ defmodule BackendWeb.Endpoint do
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do
-    socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
-    plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
   end
 
@@ -40,7 +38,7 @@ defmodule BackendWeb.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_backend_key",
-    signing_salt: "Fy3ZWsIA"
+    signing_salt: "Ol46BLXg"
 
   plug BackendWeb.Router
 end
